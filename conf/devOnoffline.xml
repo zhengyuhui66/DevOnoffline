@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config>
+        <!-- spark应用名称  -->
+        <appName>PubDevOnoffline</appName>
+        <!-- 每隔多少时间从kafka获取数据，单位秒 -->
+        <duration>10</duration>
+        <!-- kafka集群地址  -->
+        <brokers>10.10.4.85:9092,10.10.10.21:9092</brokers>
+        <!-- kafka消费团体  -->
+        <group>DevOnofflineGroup</group>
+        <!-- kafka订阅主题  -->
+        <topic>DevOnofflineTopic</topic>
+        <!-- kafka消费偏移量方式  -->
+        <offset>latest</offset>
+        <!-- 设备上下线日志表 -->
+        <devOnofflineTable>NEW_PubDevOnoffline</devOnofflineTable>
+        <!-- redis host -->
+        <redisHost>192.168.1.87</redisHost>
+        <!-- redis port -->
+        <redisPort>6379</redisPort>
+        <!-- redis timeout -->
+        <redisTimeout>2000</redisTimeout>
+        <!-- kafka redis key -->
+        <kafkaOffsetKey>kafkaOffset_devOnoffline</kafkaOffsetKey>
+</config>
